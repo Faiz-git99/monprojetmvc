@@ -1,0 +1,19 @@
+/* css pour la barre de navigation */
+header {
+    background-color: gray; /* couleur de fond */
+    padding: 5px; /* distance de bordure et les mots */
+    text-align: center; /* alignement de texte au centre */
+}
+
+header h1 {
+    font-size: 2.5rem; /* taille du texte */
+    margin-bottom: 20px; /* distance entre la marge du bas */
+}
+
+/* Style de la liste */
+header ul {
+    list-style-type: none;
+    display: flex; /* positionnement du texte */
+    justify-content: center; /* justificatif d'alignement au centre */
+    gap: 30px; /* distance des mots de barre de naviagtion */
+}
