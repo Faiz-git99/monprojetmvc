@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme de la tv</title>
+</head>
+<body>
+    <%- include('navbar') %>
+    
+    <h1>Le programme</h1>
+
+    <% resultat2.forEach(d => { %>
+    <h3><%= d.chainetv %>, <%= d.num_chainetv %></h3>
+    <% }) %>
+</body>
+</html>

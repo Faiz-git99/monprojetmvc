@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <title>Équipe</title>
+    
+</head>
+<body>
+<%- include('navbar') %>
+
+    <h1>Les membres de l'équipe</h1>
+
+    <% resultat.forEach(r => { %>
+    <h3><%= r.nom %>, <%= r.statut %></h3>
+    <% }) %>
+</body>
+</html>
