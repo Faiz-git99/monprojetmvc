@@ -1,1 +1,22 @@
 /* Le pied de page */
+.footer {
+    background-color:rgb(78, 52, 52);
+    color: aqua;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    margin-top: auto;
+    text-align: center;
+    padding-inline: 330px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-left: 300px; 
+    margin-top: 10px;
+}
+
+/* Effet au survol du lien */
+.footer :hover {
+    color:darksalmon; /* Changer la couleur du texte en bleu au survol */
+}

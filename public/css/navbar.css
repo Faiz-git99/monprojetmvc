@@ -1,19 +1,37 @@
 /* css pour la barre de navigation */
-header {
-    background-color: gray; /* couleur de fond */
-    padding: 5px; /* distance de bordure et les mots */
-    text-align: center; /* alignement de texte au centre */
+
+.entete {
+    background-color:rgb(78, 52, 52);
+    padding-inline: 150px;
+    display: inline-block; /* Pour aligner horizontalement */
+    justify-content: center; /* Centrer le contenu */
+    align-items: center; /* Centrer verticalement */
+    margin-left: 300px;
+    border-radius: 15px;
 }
 
-header h1 {
-    font-size: 2.5rem; /* taille du texte */
-    margin-bottom: 20px; /* distance entre la marge du bas */
+/* Retirer les puces des listes */
+.entete ul {
+    list-style-type: none; /* Enlève les points */
+    padding: 0; /* Enlève les marges internes */
+    display: flex; /* Affichage en ligne */
+    gap: 20px; /* Espacement entre les éléments */
 }
 
-/* Style de la liste */
-header ul {
-    list-style-type: none;
-    display: flex; /* positionnement du texte */
-    justify-content: center; /* justificatif d'alignement au centre */
-    gap: 30px; /* distance des mots de barre de naviagtion */
+
+
+/* Stylisation des liens */
+.entete a {
+    text-transform: uppercase; /* Mettre le texte en majuscule */
+    color:aqua; /* Couleur du texte rouge */
+    text-decoration: none; /* Enlève le soulignement */
+    font-size: 18px; /* Taille du texte */
+    padding: 10px 20px; /* Espacement autour du texte */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+/* Effet au survol du lien */
+.entete a:hover {
+    color:darksalmon; /* Changer la couleur du texte en bleu au survol */
 }
