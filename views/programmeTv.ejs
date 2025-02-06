@@ -4,14 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme de la tv</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <%- include('navbar') %>
     
     <h1>Le programme</h1>
-
+<table>
+    <thead>
+        <tr>
+            <th>Genres</th>
+            <th>Canal de diffuseur</th>
+            <th>Déscriptif</th>
+        </tr>
+    </thead>
+    <tbody>
     <% resultat2.forEach(d => { %>
-    <h3><%= d.chainetv %>, <%= d.num_chainetv %></h3>
+        <tr>
+    <td><%= d.chainetv %></td> 
+    <td><%= d.num_chainetv %></td>
+    <td><%= d.descriptif %></td>
+
+    <input type="button" value="modifier" onclick="modif('<%= d.id %>', '<%= d.chainetv %>', '<%= d.num_chainetv %>', '<%= d.descriptif %>')">
     <% }) %>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Ajout nouveau chant/danse</h1>
+
+<form action="/modification" method="post">
+    <input type="hidden" name="id" id="id"> <!-- Hidden field for ID -->
+
+    <label>Nom :</label>
+    <input type="text" name="chainetv" id="chainetv" required>
+
+    <label>Canal de diffuseur :</label>
+    <input type="number" name="num_chainetv" id="num_chainetv" required>
+
+    <label>Descriptif :</label>
+    <textarea cols="45" rows="5" name="descriptif" id="descriptif" required></textarea>
+
+    <input type="submit" value="Envoyez"> <!-- Change to submit -->
+</form>
+
+
+
+<br><br>
+
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/U8F5G5wR1mk?playlist=U8F5G5wR1mk&loop=1">
+</iframe>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/HAMCQJ6CTGE?playlist=HAMCQJ6CTGE&loop=1">
+</iframe>
+
+<iframe width="420" height="315"
+ src="https://www.youtube.com/embed/xX9Tg09xSPA?playlist=xX9Tg09xSPA&loop=1">
+</iframe>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/w6yyZ5-aasU?playlist=w6yyZ5-aasU&loop=1">
+</iframe>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/uorj9PACMLo?playlist=uorj9PACMLo&loop=1">
+</iframe>
+
+<iframe width="420" height="315" 
+src="https://www.youtube.com/embed/fOOXdGm-GcA?playlist=fOOXdGm-GcA&loop=1">
+</iframe>
+
+
+<%- include('footer') %>
 </body>
+
+<script>
+    function modif(id, chainetv, num_chainetv, descriptif){
+        document.querySelector("#id").value = id;
+        document.querySelector("#chainetv").value = chainetv;
+        document.querySelector("#num_chainetv").value = num_chainetv;
+        document.querySelector("#descriptif").value = descriptif;
+    }
+</script>
 </html>

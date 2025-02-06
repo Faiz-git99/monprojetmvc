@@ -2,17 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=*, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Équipe</title>
+    <link href="css/apropos.css" rel="stylesheet">
     
 </head>
 <body>
+
+
 <%- include('navbar') %>
 
     <h1>Les membres de l'équipe</h1>
-
     <% resultat.forEach(r => { %>
-    <h3><%= r.nom %>, <%= r.statut %></h3>
+
+    <div class="carte">
+        <img src="images/King.jpg" alt="Lebron jame photo" style="width: 100%;">
+            <div class="LJ">
+                
+                    <h4><b><%= r.nom %></b></h4>
+                    <p><%= r.statut %></p>
+
+            
+               
+            </div>
+    </div>
     <% }) %>
+
+<%- include('footer') %>
 </body>
+
 </html>

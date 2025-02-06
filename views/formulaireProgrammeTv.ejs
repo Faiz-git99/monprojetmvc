@@ -4,19 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire du programme TV</title>
+    <link rel="stylesheet" href="css/formulaire.css">
+    
 </head>
 <body>
+<%- include('navbar') %>
+
     <h1>Remplissage de Formulaire du programme TV</h1>
 
-    <label>Heure</label>
-    <input type="time" id="heure">
+<form>
+    <input type="hidden" name="modif" id="modif">
 
-    <label>Genre</label>
-    <select id="genre">
-    <option value=""></option>
-    <option value="chigoma">Chigoma</option>
-    </select>
+    <div class="programme">
+        <label>Le jour</label>
+        <input type="date" id="jour" required>
+    </div>
+
+    <div class="programme">
+        <label>Heure</label>
+        <input type="time" id="heure" required>
+    </div>
+
+    <div class="programme">
+        <label>Genre</label>
+        <select id="genre" required>
+            <option value=""></option>
+            <option value="rap us">Rap US</option>
+            <option value="chigoma">Chigoma</option>
+            <option value="Debaa">Debaa</option>
+            <option value="Manzara">Manzaraka mondial</option>
+            <option value="Danse culturelle">Danse culturelle</option>
+            <option value="chant malgache">Chant malgache</option>
+        </select>
+    </div>
+
+    <div class="programme">
+        <label>Durée</label>
+        <input type="time" id="duree">
+    </div>
+
+    <div class="programme">
+        <label>Canal de diffusion</label>
+        <input type="number" id="canal" required>
+    </div>
+
+    <div class="programme">
+        <label>Déscriptif</label>
+        <textarea rows="5" cols="55" id="autre"></textarea>
+    </div>
+
+    
+        <button type="submit">Soumettre</button>
+    
+
+</form>
 
 
+<%- include('footer') %>
 </body>
+
 </html>
