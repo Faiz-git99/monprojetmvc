@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 50px;
+    
+}
+
+
+/*Réalisation des cartes pour membre de l'équipe */
+.carte {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+  }
+  
+  .carte:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .LJ {
+    padding: 2px 16px;
+    background-color:rgb(78, 52, 52) ;
+    color: aqua;
+  }

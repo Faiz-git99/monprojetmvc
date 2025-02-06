@@ -1,0 +1,37 @@
+/* style pour le h1 */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+/* Style pour le tableau */
+table {
+    width: 80%; /* Le tableau prend 80% de la largeur de la page */
+    margin: 20px auto; /* Centre le tableau horizontalement avec un espace autour */
+    border-collapse: collapse; /* Supprime les espaces entre les cellules */
+    background-color: red; /* Fond rouge pour tout le tableau */
+}
+
+/* Style pour les en-têtes du tableau */
+th {
+    background-color: darkred; /* Fond rouge foncé pour les en-têtes */
+    color: white; /* Texte en blanc */
+    padding: 10px; /* Espacement autour du texte */
+    text-align: center; /* Centrer le texte des en-têtes */
+    border: 2px solid black; /* Bordure blanche autour des en-têtes */
+}
+
+/* Style pour les cellules du tableau */
+td {
+    background-color: white; /* Fond blanc pour les cellules */
+    color: black; /* Texte en noir */
+    padding: 10px; /* Espacement autour du texte */
+    text-align: center; /* Centrer le texte des cellules */
+    border: 2px solid black; /* Bordure noire autour des cellules */
+}
+
+/* Style pour les lignes paires du tableau (alternance de couleur) */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fond gris clair pour les lignes paires */
+}
