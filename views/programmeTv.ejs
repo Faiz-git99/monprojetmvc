@@ -18,14 +18,15 @@
             <th>Déscriptif</th>
         </tr>
     </thead>
+    
     <tbody>
     <% resultat2.forEach(d => { %>
         <tr>
-    <td><%= d.chainetv %></td> 
+    <td><%= d.chainetv %>
+        <input type="button" value="modifier" onclick="modif('<%= d.id %>', '<%= d.chainetv %>', '<%= d.num_chainetv %>', '<%= d.descriptif %>')">
+    </td> 
     <td><%= d.num_chainetv %></td>
     <td><%= d.descriptif %></td>
-
-    <input type="button" value="modifier" onclick="modif('<%= d.id %>', '<%= d.chainetv %>', '<%= d.num_chainetv %>', '<%= d.descriptif %>')">
     <% }) %>
         </tr>
     </tbody>
@@ -34,7 +35,7 @@
 <h1>Ajout nouveau chant/danse</h1>
 
 <form action="/modification" method="post">
-    <input type="hidden" name="id" id="id"> <!-- Hidden field for ID -->
+    <input type="hidden" name="id" id="id"> 
 
     <label>Nom :</label>
     <input type="text" name="chainetv" id="chainetv" required>
@@ -45,7 +46,7 @@
     <label>Descriptif :</label>
     <textarea cols="45" rows="5" name="descriptif" id="descriptif" required></textarea>
 
-    <input type="submit" value="Envoyez"> <!-- Change to submit -->
+    <input type="submit" value="Envoyez"> 
 </form>
 
 
