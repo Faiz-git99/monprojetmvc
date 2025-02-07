@@ -95,11 +95,11 @@ app.post("/modification", (req, res) => {
     let donnees;
 
     if (!ID) {
-        // If no ID (new record), insert
+        // Si ID n'existe pas, on fera INSERT INTO () VALUES () pour ajouter une valeur
         requeteSQL = "INSERT INTO programmediffusion (chainetv, num_chainetv, descriptif) VALUES (?, ?, ?)";
         donnees = [chainetv, num_chainetv, descriptif];
     } else {
-        // If there is an ID (update existing record)
+        // Si ID existe déjà, on fera UPDATE table SET colonne = ? WHERE id = ? pour modifier la valeur
         requeteSQL = "UPDATE programmediffusion SET chainetv = ?, num_chainetv = ?, descriptif = ? WHERE id = ?";
         donnees = [chainetv, num_chainetv, descriptif, ID];
     }
@@ -107,12 +107,10 @@ app.post("/modification", (req, res) => {
     req.getConnection((erreur, connection) => {
         if (erreur) {
             console.log(erreur);
-            res.status(500).send("Database connection error");
         } else {
             connection.query(requeteSQL, donnees, (err, result) => {
                 if (err) {
                     console.log(err);
-                    res.status(500).send("Error executing SQL query");
                 } else {
                     console.log("Modification réussi");
                     res.status(302).redirect("/programmeTv");  // Redirect after insertion or update
@@ -121,6 +119,13 @@ app.post("/modification", (req, res) => {
         }
     });
 });
+
+// Créer une route pour l'authentification/connexion
+app.get("/login", (req, res) => {
+    
+    res.render("login")
+});
+
 
 
 module.exports = app;
