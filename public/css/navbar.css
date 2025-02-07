@@ -6,7 +6,7 @@
     display: inline-block; /* Pour aligner horizontalement */
     justify-content: center; /* Centrer le contenu */
     align-items: center; /* Centrer verticalement */
-    margin-left: 300px;
+    margin-left: 80px;
     border-radius: 15px;
 }
 

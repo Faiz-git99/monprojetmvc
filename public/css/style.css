@@ -24,11 +24,28 @@ th {
 
 /* Style pour les cellules du tableau */
 td {
+    vertical-align: middle; /* Aligner verticalement le contenu de la cellule */
     background-color: white; /* Fond blanc pour les cellules */
     color: black; /* Texte en noir */
     padding: 10px; /* Espacement autour du texte */
     text-align: center; /* Centrer le texte des cellules */
     border: 2px solid black; /* Bordure noire autour des cellules */
+}
+
+/* Style pour les boutons */
+input[type="button"] {
+    background-color: red; /* Vert pour le bouton */
+    color: white; /* Texte en blanc */
+    padding: 8px 16px; /* Espacement interne du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-size: 14px; /* Taille de texte */
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+}
+
+input:hover {
+    background-color: darksalmon;
 }
 
 /* Style pour les lignes paires du tableau (alternance de couleur) */
