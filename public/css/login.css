@@ -1,0 +1,94 @@
+/* Style du formulaire (connexion) */
+.Connexion {
+    margin: 20px auto; /*centre le contenu au milieu */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    border: 3px solid black; /* Bordure noire autour du formulaire */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Légère ombre autour du formulaire */
+    transition: all 0.3s ease-in-out; /* Transition fluide */
+}
+
+/* Style du titre */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Gris foncé pour le texte */
+    font-size: 24px;
+}
+
+/* Style des groupes d'entrées */
+.personne {
+    margin-bottom: 20px;
+}
+
+/* Label des champs */
+.personne label {
+    display: block;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+}
+
+/* Champs de saisie */
+.personne input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: all 0.3s ease; /* Transition fluide pour le focus */
+}
+
+/* Effet au survol et focus des champs de saisie */
+.personne input:hover,
+.personne input:focus {
+    border-color: #4CAF50; /* Bordure verte au survol/focus */
+    background-color: #e8f5e9; /* Fond vert clair au focus */
+}
+
+/* Style du bouton */
+.bouton input {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Vert pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.bouton input:hover {
+    background-color: darksalmon; /* Change la couleur du bouton au survol */
+    transform: translateY(-2px); /* Légère animation de déplacement */
+}
+
+/* Lien mot de passe oublié */
+.oubliemdp {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.oubliemdp a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+
+.oubliemdp a:hover {
+    color: #4CAF50; /* Changer la couleur du lien au survol */
+    text-decoration: underline;
+}
+
+
+  
+  
+  
