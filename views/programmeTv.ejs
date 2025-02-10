@@ -18,7 +18,7 @@
             <th>Déscriptif</th>
         </tr>
     </thead>
-    
+
     <tbody>
     <% resultat2.forEach(d => { %>
         <tr>
@@ -32,21 +32,35 @@
     </tbody>
 </table>
 
-<h1>Ajout nouveau chant/danse</h1>
+
 
 <form action="/modification" method="post">
     <input type="hidden" name="id" id="id"> 
 
-    <label>Nom :</label>
-    <input type="text" name="chainetv" id="chainetv" required>
+    <div class="ajout">
+        <h1>Ajout nouveau chant/danse</h1>
 
-    <label>Canal de diffuseur :</label>
-    <input type="number" name="num_chainetv" id="num_chainetv" required>
+        <div class="seance">
+            <label>Nom :</label>
+            <input type="text" name="chainetv" id="chainetv" required>
+        </div>
 
-    <label>Descriptif :</label>
-    <textarea cols="45" rows="5" name="descriptif" id="descriptif" required></textarea>
+        <div class="seance">
+            <label>Canal de diffuseur :</label>
+            <input type="number" name="num_chainetv" id="num_chainetv" required>
+        </div>
 
-    <input type="submit" value="Envoyez"> 
+        <div class="seance">
+            <label>Descriptif :</label>
+            <textarea cols="45" rows="5" name="descriptif" id="descriptif" required></textarea>
+        </div>
+
+        <div class="bouton">
+            <input type="submit" value="Envoyez" id="entrer" required> 
+        </div>
+    </div>
+
+
 </form>
 
 
