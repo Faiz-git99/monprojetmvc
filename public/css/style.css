@@ -48,7 +48,84 @@ input:hover {
     background-color: darksalmon;
 }
 
-/* Style pour les lignes paires du tableau (alternance de couleur) */
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Fond gris clair pour les lignes paires */
+/* Style pour le formulaire d'ajout de chant/musique */
+.ajout {
+    margin: 20px auto;
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* style du titre */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Gris foncé pour le texte */
+    font-size: 24px;
+}
+
+/* style des groupes "seance" */
+.seance {
+    margin-bottom: 20px;
+}
+
+/* style des labels */
+.seance label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: black;
+}
+
+/* style des input */
+.seance input {
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 12px; 
+  background-color: #fafafa; 
+  font-size: 18px;
+  transition: all 03s ease;
+}
+
+/*style du descriptif */
+.seance textarea {
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 18px;
+}
+
+
+/* Effet au survol et focus des champs de saisie */
+.seance input:hover,
+.seance input:focus {
+    border-color: green; /* Bordure verte au survol/focus */
+    background-color: #e8f5e9; /* Fond vert clair au focus */
+}
+
+/* Style du bouton */
+.bouton input {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Vert pour le bouton */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.bouton input:hover {
+    background-color: darksalmon; /* Change la couleur du bouton au survol */
+    transform: translateY(-2px); /* Légère animation de déplacement */
 }
