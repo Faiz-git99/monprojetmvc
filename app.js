@@ -2,6 +2,16 @@
 
 const express = require("express");
 
+const aproposRoutes = require('./routes/apropos');
+
+const programmeTvRoutes = require('./routes/programmeTv');
+
+const  loginRoutes = require('./routes/login');
+
+const signupRoutes = require('./routes/signup');
+
+const formulaireProgrammeTvRoutes = require('./routes/formulaireProgrammeTv');
+
 const url = require("url");
 
 const mysql2 = require("mysql2");
@@ -40,7 +50,7 @@ app.get("/", (req, res) => {
 });
 
 // route qui affiche les membres de l'équipe
-app.get("/apropos", (req, res) => {
+/*app.get("/apropos", (req, res) => {
     req.getConnection((erreur, connection) => {
         if(erreur){
             console.log(erreur)
@@ -55,10 +65,10 @@ app.get("/apropos", (req, res) => {
             });
         };
     });
-});
+}); */
 
 // route qui affiche le programme tv
-app.get("/programmeTv", (req, res) => {
+/*app.get("/programmeTv", (req, res) => {
     req.getConnection((erreur, connection) => {
         if(erreur){
             console.log(erreur)
@@ -73,12 +83,12 @@ app.get("/programmeTv", (req, res) => {
             });
         };
     });
-});
+}); */
 
-app.get("/formulaireProgrammeTv", (req, res) => {
-    
+//création du formulaire de programme
+/* app.get("/formulaireProgrammeTv", (req, res) => {
     res.render("formulaireProgrammeTv")
-});
+}); */
 
 // crée une route avec post pour ajouter un élément dans la base de données
 app.post("/modification", (req, res) => {
@@ -87,7 +97,7 @@ app.post("/modification", (req, res) => {
     console.log("corps requête num_chainetv", req.body.num_chainetv);
     console.log("corps requête descriptif", req.body.descriptif);
 
-    let ID = req.body.id || null;  // If no id is provided, set it to null
+    let ID = req.body.id || null;  
     let chainetv = req.body.chainetv;
     let num_chainetv = req.body.num_chainetv;
     let descriptif = req.body.descriptif;
@@ -113,7 +123,7 @@ app.post("/modification", (req, res) => {
                     console.log(err);
                 } else {
                     console.log("Modification réussi");
-                    res.status(302).redirect("/programmeTv");  // Redirect after insertion or update
+                    res.status(302).redirect("/programmeTv");  // Redirige après l'ajout ou la modification
                 }
             });
         }
@@ -121,11 +131,29 @@ app.post("/modification", (req, res) => {
 });
 
 // Créer une route pour l'authentification/connexion
-app.get("/login", (req, res) => {
-    
+/* app.get("/login", (req, res) => {
     res.render("login")
-});
+}); */
 
+// Créer une route avec post pour recupérer les éléments de la base de données
+app.post("/login", (req, res) => {
+    
+})
 
+/* app.get("/signup", (req, res) => {
+    res.render("signup")
+}); */
+
+// créer une route post pour apporter la modification sur signup.ejs
+app.post("signup", (req, res) => {
+
+})
+
+// utilisations des routeurs 
+app.use('/', aproposRoutes); 
+app.use('/', programmeTvRoutes);
+app.use('/', loginRoutes);
+app.use('/', signupRoutes);
+app.use('/', formulaireProgrammeTvRoutes);
 
 module.exports = app;
