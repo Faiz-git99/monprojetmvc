@@ -10,5 +10,7 @@ const router = express.Router();
 // remplace la syntaxe d'habitude <=> app.get("/", (req, res) => {
 // res.render("login")}); ce qui permet de rediriger le résultat vers apropos
 router.get('/login', loginController.loginView);
+router.post('/connexion', loginController.validationlogin);
+
 
 module.exports = router; 
