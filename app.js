@@ -1,4 +1,4 @@
-// réation des chemins et des requêtes
+// création des chemins et des requêtes
 
 const express = require("express");
 
@@ -18,6 +18,11 @@ const mysql2 = require("mysql2");
 
 const myconnection = require("express-myconnection");
 
+const bcrypt = require('bcrypt');
+
+const router = require("./routes/apropos");
+
+// connexion à la base de données
 const connection = {
     host : "localhost",
     user : "root",
@@ -50,7 +55,7 @@ app.get("/", (req, res) => {
 });
 
 // route qui affiche les membres de l'équipe
-/*app.get("/apropos", (req, res) => {
+/* app.get("/apropos", (req, res) => {
     req.getConnection((erreur, connection) => {
         if(erreur){
             console.log(erreur)
@@ -144,10 +149,7 @@ app.post("/login", (req, res) => {
     res.render("signup")
 }); */
 
-// créer une route post pour apporter la modification sur signup.ejs
-app.post("signup", (req, res) => {
 
-})
 
 // utilisations des routeurs 
 app.use('/', aproposRoutes); 
