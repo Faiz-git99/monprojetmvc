@@ -10,31 +10,33 @@
 
 <%- include('navbar') %>
 
-    <form>
+    <form action="/inscription" method="post">
+        <input type="hidden" name="id" id="id">
+
         <div class="Connexion">
             <h1>Inscription</h1>
     
             <div class="personne">
                 <label>Nom :</label>
-                <input type="text" name="identifiant" id="identifiant" required> 
+                <input type="text" name="identifiantnom" id="nom" required> 
                 <br><br>
             </div>
     
             <div class="personne">
                 <label>Prénom :</label>
-                <input type="text" name="identifiant" id="identifiant" required> 
+                <input type="text" name="identifiantprenom" id="prenom" required> 
                 <br><br>
             </div>
 
             <div class="personne">
                 <label>Email :</label>
-                <input type="email" name="identifiant" id="identifiant" required> 
+                <input type="email" name="identifiantmail" id="email" required> 
                 <br><br>
             </div>
 
             <div class="personne">
                 <label>Date de naissance :</label>
-                <input type="date" name="identifiant" id="identifiant" required> 
+                <input type="date" name="identifiantnaissance" id="datenaissance" required> 
                 <br><br>
             </div>
 
@@ -45,12 +47,12 @@
             </div>
     
             <div class="bouton">
-                <input type="submit" value="Se connecter" id="entrer" required>
+                <input type="submit" value="Envoyez" id="boutonentrer" required>
                 <br><br>
             </div>
     
             <div class="oubliemdp">
-                <a href="#">Mot de passe oublié ?</a>
+                <a href="login" target="_blank">Connexion</a>
             </div>
         </div>    
     </form>
