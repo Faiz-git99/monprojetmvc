@@ -1,4 +1,4 @@
-// création du service 
+// création du serveur
 const http = require("http");
 
 const app = require("./app");
