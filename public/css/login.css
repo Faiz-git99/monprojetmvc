@@ -71,19 +71,19 @@ h1 {
 }
 
 /* Lien mot de passe oublié */
-.oubliemdp {
+.login {
     text-align: center;
     margin-top: 10px;
 }
 
-.oubliemdp a {
+.login a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease; /* Transition de couleur */
 }
 
-.oubliemdp a:hover {
+.login a:hover {
     color: #4CAF50; /* Changer la couleur du lien au survol */
     text-decoration: underline;
 }
