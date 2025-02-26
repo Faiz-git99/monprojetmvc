@@ -10,5 +10,5 @@ const router = express.Router();
 // remplace la syntaxe d'habitude <=> app.get("/", (req, res) => {
 // res.render("programmeTv")}); ce qui permet de rediriger le résultat vers programmeTv
 router.get('/programmeTv', programmeTvController.programmeTvView);
-
+router.post('/modification', programmeTvController.modificationProgramme);
 module.exports = router; 
